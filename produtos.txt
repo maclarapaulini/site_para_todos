@@ -1,0 +1,113 @@
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover group">
+                    <div class="relative overflow-hidden h-72">
+                        <img src="https://static.photos/craft/640x360/301" alt="Bolsa de crochê" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-coral text-white px-3 py-1 rounded-full text-xs uppercase tracking-wider">Nova</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Bolsa Summer Vibes</h3>
+                        <p class="text-gray-600 text-sm mb-4">Bolsa em fio de algodão ecológico, perfeita para dias ensolarados.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-coral font-bold text-lg">R$ 189,00</span>
+                            <button class="text-gray-400 hover:text-coral transition-colors">
+                                <i data-lucide="heart" class="w-6 h-6"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover group">
+                    <div class="relative overflow-hidden h-72">
+                        <img src="https://static.photos/craft/640x360/302" alt="Tapete de crochê" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Tapete Mandala</h3>
+                        <p class="text-gray-600 text-sm mb-4">Tapete redondo em tons neutros, ideal para sala ou quarto.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-coral font-bold text-lg">R$ 245,00</span>
+                            <button class="text-gray-400 hover:text-coral transition-colors">
+                                <i data-lucide="heart" class="w-6 h-6"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover group">
+                    <div class="relative overflow-hidden h-72">
+                        <img src="https://static.photos/craft/640x360/303" alt="Cobertor de bebê" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-sage text-white px-3 py-1 rounded-full text-xs uppercase tracking-wider">Mais Vendido</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Manta Baby Soft</h3>
+                        <p class="text-gray-600 text-sm mb-4">Manta delicada para bebê em fio antialérgico super macio.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-coral font-bold text-lg">R$ 158,00</span>
+                            <button class="text-gray-400 hover:text-coral transition-colors">
+                                <i data-lucide="heart" class="w-6 h-6"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover group">
+                    <div class="relative overflow-hidden h-72">
+                        <img src="https://static.photos/craft/640x360/304" alt="Vestido de crochê" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Vestido Boho Chic</h3>
+                        <p class="text-gray-600 text-sm mb-4">Vestido longo em crochê com detalhes em renda.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-coral font-bold text-lg">R$ 320,00</span>
+                            <button class="text-gray-400 hover:text-coral transition-colors">
+                                <i data-lucide="heart" class="w-6 h-6"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover group">
+                    <div class="relative overflow-hidden h-72">
+                        <img src="https://static.photos/craft/640x360/305" alt="Cachecol" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Cachecol Infinity</h3>
+                        <p class="text-gray-600 text-sm mb-4">Cachecol circular em lã merino super soft.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-coral font-bold text-lg">R$ 145,00</span>
+                            <button class="text-gray-400 hover:text-coral transition-colors">
+                                <i data-lucide="heart" class="w-6 h-6"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover group">
+                    <div class="relative overflow-hidden h-72">
+                        <img src="https://static.photos/craft/640x360/306" alt="Cesto organizador" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-coral-dark text-white px-3 py-1 rounded-full text-xs uppercase tracking-wider">Eco</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Cesto Organizador</h3>
+                        <p class="text-gray-600 text-sm mb-4">Conjunto de 3 cestos em fio de malha reciclado.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-coral font-bold text-lg">R$ 198,00</span>
+                            <button class="text-gray-400 hover:text-coral transition-colors">
+                                <i data-lucide="heart" class="w-6 h-6"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <button class="border-2 border-coral text-coral px-8 py-3 rounded-full font-medium hover:bg-coral hover:text-white transition-all duration-300 inline-flex items-center gap-2">
+                    Ver Catálogo Completo
+                    <i data-lucide="grid-3x3" class="w-4 h-4"></i>
+                </button>
+            </div>

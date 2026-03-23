@@ -1,0 +1,65 @@
+<!-- Testimonials -->
+    <section class="py-20 bg-coral-light/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <p class="text-coral font-medium tracking-widest uppercase mb-4 text-sm">Depoimentos</p>
+                <h2 class="text-4xl font-bold text-gray-800">O que dizem nossas clientes</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex text-coral mb-4">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"A manta que comprei para minha filha é a coisa mais macia do mundo. Dá para sentir o carinho em cada ponto. Super recomendo!"</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://static.photos/people/200x200/401" alt="Cliente" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <p class="font-bold text-gray-800">Juliana Martins</p>
+                            <p class="text-sm text-gray-500">São Paulo, SP</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex text-coral mb-4">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"Encomendei um vestido personalizado para um casamento na praia. Ficou perfeito, único e com uma qualidade impecável. A Fernanda é uma artista!"</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://static.photos/people/200x200/402" alt="Cliente" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <p class="font-bold text-gray-800">Carolina Dias</p>
+                            <p class="text-sm text-gray-500">Rio de Janeiro, RJ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex text-coral mb-4">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"Os cestos organizadores transformaram minha decoração. Além de lindos, são super resistentes. Já quero encomendar mais para presentear!"</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://static.photos/people/200x200/403" alt="Cliente" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <p class="font-bold text-gray-800">Amanda Costa</p>
+                            <p class="text-sm text-gray-500">Belo Horizonte, MG</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

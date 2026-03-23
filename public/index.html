@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FF Studio | Arte em Crochê</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body class="antialiased texture-overlay">
+    <!-- Navegação -->
+    <nav class="fixed w-full z-50 nav-blur border-b border-orange-100 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold text-gray-800 tracking-wide">
+                        <span class="text-coral">FF</span> Studio
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-coral transition-colors duration-300 text-sm uppercase tracking-wider">Início</a>
+                    <a href="#sobre" class="text-gray-700 hover:text-coral transition-colors duration-300 text-sm uppercase tracking-wider">Sobre</a>
+                    <a href="#produtos" class="text-gray-700 hover:text-coral transition-colors duration-300 text-sm uppercase tracking-wider">Coleções</a>
+                    <a href="#processo" class="text-gray-700 hover:text-coral transition-colors duration-300 text-sm uppercase tracking-wider">Processo</a>
+                    <a href="#contato" class="bg-coral text-white px-6 py-2 rounded-full text-sm uppercase tracking-wider btn-hover">Encomendar</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-coral focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-orange-100">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-coral hover:bg-orange-50 rounded-md">Início</a>
+                <a href="#sobre" class="block px-3 py-2 text-gray-700 hover:text-coral hover:bg-orange-50 rounded-md">Sobre</a>
+                <a href="#produtos" class="block px-3 py-2 text-gray-700 hover:text-coral hover:bg-orange-50 rounded-md">Coleções</a>
+                <a href="#processo" class="block px-3 py-2 text-gray-700 hover:text-coral hover:bg-orange-50 rounded-md">Processo</a>
+                <a href="#contato" class="block px-3 py-2 text-coral font-semibold">Encomendar</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="relative pt-20 min-h-screen flex items-center hero-pattern overflow-hidden">
+        <div class="absolute top-20 right-10 opacity-20 yarn-float hidden lg:block">
+            <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="80" stroke="#FF8B7B" stroke-width="2" stroke-dasharray="10 5"/>
+                <circle cx="100" cy="100" r="60" stroke="#FF8B7B" stroke-width="2" stroke-dasharray="5 5"/>
+                <circle cx="100" cy="100" r="40" stroke="#FF8B7B" stroke-width="3"/>
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in order-2 lg:order-1">
+                    <p class="text-coral font-medium tracking-widest uppercase mb-4 text-sm">Artesanal & Único</p>
+                    <h1 class="text-5xl lg:text-7xl font-bold text-gray-800 leading-tight mb-6">
+                        Peças feitas à mão com <span class="text-coral italic">amor</span> e dedicação
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-lg">
+                        Transformamos fios em arte. Cada ponto conta uma história de delicadeza, criatividade e elegância. Descubra peças exclusivas que aquecem o coração.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#produtos" class="bg-coral text-white px-8 py-4 rounded-full font-medium btn-hover inline-flex items-center gap-2">
+                            Ver Coleção
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#sobre" class="border-2 border-green text-green px-8 py-4 rounded-full font-medium hover-bg-green transition-all duration-300">
+                            Conheça a Artesã
+                        </a>
+                    </div>
+                    
+                    <div class="mt-12 flex items-center gap-8 text-sm text-gray-500">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-sage"></i>
+                            <span>100% Artesanal</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="heart" class="w-5 h-5 text-coral"></i>
+                            <span>Feito com Amor</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative order-1 lg:order-2">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl card-hover">
+                        <img src="https://static.photos/craft/1200x630/101" alt="Crochê artesanal delicado" class="w-full h-auto object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl max-w-xs hidden md:block">
+                        <p class="handwritten text-coral text-lg mb-2">"Cada ponto é um momento de paz"</p>
+                        <p class="text-xs text-gray-500 uppercase tracking-wider">— Fernanda, fundadora</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="https://static.photos/craft/640x360/201" alt="Mãos trabalhando crochê" class="rounded-2xl shadow-lg w-full h-64 object-cover">
+                        <img src="https://static.photos/craft/640x360/202" alt="Fios de lã coloridos" class="rounded-2xl shadow-lg w-full h-64 object-cover mt-8">
+                    </div>
+                    <div class="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-coral-light rounded-3xl rotate-3"></div>
+                </div>
+                
+                <div>
+                    <p class="text-coral font-medium tracking-widest uppercase mb-4 text-sm">Nossa História</p>
+                    <h2 class="text-4xl font-bold text-gray-800 mb-6">O toque humano em cada criação</h2>
+                    <div class="space-y-4 text-gray-600 leading-relaxed">
+                        <p>
+                            A <strong>FF Studio</strong> nasceu do amor pelo crochê e da vontade de transformar fios simples em peças que carregam afeto. Fundada por Fernanda, a marca representa anos de dedicação à arte manual.
+                        </p>
+                        <p>
+                            Acreditamos que o artesanal é um ato de resistência no mundo digital. Cada peça é única, com suas próprias imperfeições que as tornam perfeitas. Utilizamos fios de alta qualidade, priorizando materiais sustentáveis e processos conscientes.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-8 grid grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-green mb-1">500+</div>
+                            <div class="text-xs text-gray-500 uppercase tracking-wider">Peças Criadas</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-green mb-1">5</div>
+                            <div class="text-xs text-gray-500 uppercase tracking-wider">Anos de Arte</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-green mb-1">100%</div>
+                            <div class="text-xs text-gray-500 uppercase tracking-wider">Clientes Felizes</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products/Collections Section -->
+    <section id="produtos" class="py-20 bg-rose">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <p class="text-coral font-medium tracking-widest uppercase mb-4 text-sm">Coleções Exclusivas</p>
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">Peças que Encantam</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Do boho chic ao minimalismo, nossas criações adaptam-se a diversos estilos, sempre mantendo a essência artesanal e acolhedora.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="processo" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <p class="text-coral font-medium tracking-widest uppercase mb-4 text-sm">Como Trabalhamos</p>
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Do Fio à Peça Final</h2>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center group">
+                    <div class="w-20 h-20 mx-auto mb-6 bg-coral-light rounded-full flex items-center justify-center group-hover:bg-coral transition-colors duration-300">
+                        <i data-lucide="message-circle" class="w-8 h-8 text-coral group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">1. Consulta</h3>
+                    <p class="text-gray-600 text-sm">Entendemos suas necessidades e preferências de cores e estilo.</p>
+                </div>
+
+                <div class="text-center group">
+                    <div class="w-20 h-20 mx-auto mb-6 bg-coral-light rounded-full flex items-center justify-center group-hover:bg-coral transition-colors duration-300">
+                        <i data-lucide="palette" class="w-8 h-8 text-coral group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">2. Seleção</h3>
+                    <p class="text-gray-600 text-sm">Escolhemos os melhores fios e materiais para sua peça.</p>
+                </div>
+
+                <div class="text-center group">
+                    <div class="w-20 h-20 mx-auto mb-6 bg-coral-light rounded-full flex items-center justify-center group-hover:bg-coral transition-colors duration-300">
+                        <i data-lucide="scissors" class="w-8 h-8 text-coral group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">3. Criação</h3>
+                    <p class="text-gray-600 text-sm">Cada ponto é feito manualmente com atenção aos detalhes.</p>
+                </div>
+
+                <div class="text-center group">
+                    <div class="w-20 h-20 mx-auto mb-6 bg-coral-light rounded-full flex items-center justify-center group-hover:bg-coral transition-colors duration-300">
+                        <i data-lucide="gift" class="w-8 h-8 text-coral group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">4. Entrega</h3>
+                    <p class="text-gray-600 text-sm">Embalamos com carinho e enviamos para todo o Brasil.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Instagram Feed Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <p class="text-coral font-medium tracking-widest uppercase mb-4 text-sm">Siga-nos</p>
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">@ffstudio.croche</h2>
+                <p class="text-gray-600">Acompanhe nosso dia a dia e novidades</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer">
+                    <img src="https://static.photos/craft/320x240/501" alt="Instagram" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                </div>
+                <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer">
+                    <img src="https://static.photos/craft/320x240/502" alt="Instagram" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                </div>
+                <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer">
+                    <img src="https://static.photos/craft/320x240/503" alt="Instagram" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                </div>
+                <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer">
+                    <img src="https://static.photos/craft/320x240/504" alt="Instagram" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                </div>
+                <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer hidden md:block">
+                    <img src="https://static.photos/craft/320x240/505" alt="Instagram" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                </div>
+                <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer hidden md:block">
+                    <img src="https://static.photos/craft/320x240/506" alt="Instagram" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-20 bg-coral-light/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div>
+                    <p class="text-coral font-medium tracking-widest uppercase mb-4 text-sm">Encomendas</p>
+                    <h2 class="text-4xl font-bold text-gray-800 mb-6">Vamos criar algo especial juntas?</h2>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Aceitamos encomendas personalizadas. Me conte sua ideia e vamos transformá-la em uma peça única e exclusiva, feita especialmente para você ou para presentear alguém especial.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-coral rounded-full flex items-center justify-center text-white">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Email</p>
+                                <p class="font-medium text-gray-800">contato@ffstudio.com.br</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-coral rounded-full flex items-center justify-center text-white">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">WhatsApp</p>
+                                <p class="font-medium text-gray-800">(11) 98765-4321</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-coral rounded-full flex items-center justify-center text-white">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Atendimento</p>
+                                <p class="font-medium text-gray-800">São Paulo - SP (Enviamos para todo Brasil)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-4"><span class="text-coral">FF</span> Studio</h3>
+                    <p class="text-gray-400 mb-6 max-w-sm">Transformando fios em arte desde 2019. Peças exclusivas feitas à mão com amor, dedicação e muito carinho.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-coral transition-colors">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-coral transition-colors">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-coral transition-colors">
+                            <i data-lucide="youtube" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4 text-coral">Links Rápidos</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#home" class="hover:text-white transition-colors">Início</a></li>
+                        <li><a href="#sobre" class="hover:text-white transition-colors">Sobre</a></li>
+                        <li><a href="#produtos" class="hover:text-white transition-colors">Coleções</a></li>
+                        <li><a href="#contato" class="hover:text-white transition-colors">Encomendas</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4 text-coral">Atendimento</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Seg - Sex: 9h às 18h</li>
+                        <li>Sáb: 9h às 13h</li>
+                        <li class="text-coral mt-4">contato@ffstudio.com.br</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">© 2024 FF Studio. Todos os direitos reservados.</p>
+                <p class="text-gray-500 text-sm">Feito com <i data-lucide="heart" class="w-3 h-3 inline text-coral fill-current"></i> e muito crochê</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navbar = document.getElementById('navbar');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Form Submit Prevention (Demo)
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Obrigada pelo interesse! Em um site real, esta mensagem seria enviada para nossa equipe. 💕');
+        });
+
+        // Intersection Observer for Fade In Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-hover, .group').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
