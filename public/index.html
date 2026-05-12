@@ -285,6 +285,17 @@
         </div>
     </section>
 
+    <section class="bg-coral-light/20 pb-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="relative z-10 -mb-8 flex justify-center">
+                <a id="whatsapp-btn" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-green text-white px-8 py-4 rounded-full font-semibold shadow-lg btn-hover">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    Pedir no WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -336,6 +347,17 @@
         // Initialize Lucide Icons
         lucide.createIcons();
 
+        const phone = "5514988082038";
+        const message = "Olá, tenho interesse no sistema!";
+        const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+        console.log(whatsappUrl);
+
+        const whatsappButton = document.getElementById('whatsapp-btn');
+        if (whatsappButton) {
+            whatsappButton.href = whatsappUrl;
+        }
+
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -370,10 +392,13 @@
         });
 
         // Form Submit Prevention (Demo)
-        document.querySelector('form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Obrigada pelo interesse! Em um site real, esta mensagem seria enviada para nossa equipe. 💕');
-        });
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Obrigada pelo interesse! Em um site real, esta mensagem seria enviada para nossa equipe. 💕');
+            });
+        }
 
         // Intersection Observer for Fade In Animations
         const observerOptions = {
