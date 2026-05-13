@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FF Studio | Arte em Crochê</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 
@@ -20,13 +23,27 @@
                         <span class="text-coral">FF</span> Studio
                     </a>
                 </div>
-                
+
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="text-gray-700 hover:text-coral transition-colors duration-300 text-sm uppercase tracking-wider">Início</a>
-                    <a href="#sobre" class="text-gray-700 hover:text-coral transition-colors duration-300 text-sm uppercase tracking-wider">Sobre</a>
-                    <a href="#produtos" class="text-gray-700 hover:text-coral transition-colors duration-300 text-sm uppercase tracking-wider">Coleções</a>
-                    <a href="#processo" class="text-gray-700 hover:text-coral transition-colors duration-300 text-sm uppercase tracking-wider">Processo</a>
-                    <a href="#contato" class="bg-coral text-white px-6 py-2 rounded-full text-sm uppercase tracking-wider btn-hover">Encomendar</a>
+                    <a href="#home"
+                        class="text-gray-700 hover:text-coral transition-colors duration-300 text-sm uppercase tracking-wider">Início</a>
+                    <a href="#sobre"
+                        class="text-gray-700 hover:text-coral transition-colors duration-300 text-sm uppercase tracking-wider">Sobre</a>
+                    <a href="#produtos"
+                        class="text-gray-700 hover:text-coral transition-colors duration-300 text-sm uppercase tracking-wider">Coleções</a>
+                    <a href="#processo"
+                        class="text-gray-700 hover:text-coral transition-colors duration-300 text-sm uppercase tracking-wider">Processo</a>
+                    <a href="#contato"
+                        class="bg-coral text-white px-6 py-2 rounded-full text-sm uppercase tracking-wider btn-hover">Encomendar</a>
+                    <a href="carrinho.html"
+                        class="relative text-gray-700 hover:text-coral transition-colors duration-300">
+                        <i data-lucide="shopping-bag" class="w-6 h-6"></i>
+
+                        <span id="cart-count"
+                            class="absolute -top-2 -right-2 bg-coral text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
+                            0
+                        </span>
+                    </a>
                 </div>
 
                 <div class="md:hidden flex items-center">
@@ -40,10 +57,14 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-orange-100">
             <div class="px-4 pt-2 pb-6 space-y-2">
-                <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-coral hover:bg-orange-50 rounded-md">Início</a>
-                <a href="#sobre" class="block px-3 py-2 text-gray-700 hover:text-coral hover:bg-orange-50 rounded-md">Sobre</a>
-                <a href="#produtos" class="block px-3 py-2 text-gray-700 hover:text-coral hover:bg-orange-50 rounded-md">Coleções</a>
-                <a href="#processo" class="block px-3 py-2 text-gray-700 hover:text-coral hover:bg-orange-50 rounded-md">Processo</a>
+                <a href="#home"
+                    class="block px-3 py-2 text-gray-700 hover:text-coral hover:bg-orange-50 rounded-md">Início</a>
+                <a href="#sobre"
+                    class="block px-3 py-2 text-gray-700 hover:text-coral hover:bg-orange-50 rounded-md">Sobre</a>
+                <a href="#produtos"
+                    class="block px-3 py-2 text-gray-700 hover:text-coral hover:bg-orange-50 rounded-md">Coleções</a>
+                <a href="#processo"
+                    class="block px-3 py-2 text-gray-700 hover:text-coral hover:bg-orange-50 rounded-md">Processo</a>
                 <a href="#contato" class="block px-3 py-2 text-coral font-semibold">Encomendar</a>
             </div>
         </div>
@@ -52,9 +73,9 @@
     <section id="home" class="relative pt-20 min-h-screen flex items-center hero-pattern overflow-hidden">
         <div class="absolute top-20 right-10 opacity-20 yarn-float hidden lg:block">
             <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="100" cy="100" r="80" stroke="#FF8B7B" stroke-width="2" stroke-dasharray="10 5"/>
-                <circle cx="100" cy="100" r="60" stroke="#FF8B7B" stroke-width="2" stroke-dasharray="5 5"/>
-                <circle cx="100" cy="100" r="40" stroke="#FF8B7B" stroke-width="3"/>
+                <circle cx="100" cy="100" r="80" stroke="#FF8B7B" stroke-width="2" stroke-dasharray="10 5" />
+                <circle cx="100" cy="100" r="60" stroke="#FF8B7B" stroke-width="2" stroke-dasharray="5 5" />
+                <circle cx="100" cy="100" r="40" stroke="#FF8B7B" stroke-width="3" />
             </svg>
         </div>
 
@@ -66,18 +87,21 @@
                         Peças feitas à mão com <span class="text-coral italic">amor</span> e dedicação
                     </h1>
                     <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-lg">
-                        Transformamos fios em arte. Cada ponto conta uma história de delicadeza, criatividade e elegância. Descubra peças exclusivas que aquecem o coração.
+                        Transformamos fios em arte. Cada ponto conta uma história de delicadeza, criatividade e
+                        elegância. Descubra peças exclusivas que aquecem o coração.
                     </p>
                     <div class="flex flex-wrap gap-4">
-                        <a href="#produtos" class="bg-coral text-white px-8 py-4 rounded-full font-medium btn-hover inline-flex items-center gap-2">
+                        <a href="#produtos"
+                            class="bg-coral text-white px-8 py-4 rounded-full font-medium btn-hover inline-flex items-center gap-2">
                             Ver Coleção
                             <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
-                        <a href="#sobre" class="border-2 border-green text-green px-8 py-4 rounded-full font-medium hover-bg-green transition-all duration-300">
+                        <a href="#sobre"
+                            class="border-2 border-green text-green px-8 py-4 rounded-full font-medium hover-bg-green transition-all duration-300">
                             Conheça a Artesã
                         </a>
                     </div>
-                    
+
                     <div class="mt-12 flex items-center gap-8 text-sm text-gray-500">
                         <div class="flex items-center gap-2">
                             <i data-lucide="check-circle" class="w-5 h-5 text-sage"></i>
@@ -89,10 +113,11 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="relative order-1 lg:order-2">
                     <div class="relative rounded-3xl overflow-hidden shadow-2xl card-hover">
-                        <img src="https://static.photos/craft/1200x630/101" alt="Crochê artesanal delicado" class="w-full h-auto object-cover">
+                        <img src="https://static.photos/craft/1200x630/101" alt="Crochê artesanal delicado"
+                            class="w-full h-auto object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                     </div>
                     <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl max-w-xs hidden md:block">
@@ -110,24 +135,32 @@
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div class="relative">
                     <div class="grid grid-cols-2 gap-4">
-                        <img src="https://static.photos/craft/640x360/201" alt="Mãos trabalhando crochê" class="rounded-2xl shadow-lg w-full h-64 object-cover">
-                        <img src="https://static.photos/craft/640x360/202" alt="Fios de lã coloridos" class="rounded-2xl shadow-lg w-full h-64 object-cover mt-8">
+                        <img src="https://static.photos/craft/640x360/201" alt="Mãos trabalhando crochê"
+                            class="rounded-2xl shadow-lg w-full h-64 object-cover">
+                        <img src="https://static.photos/craft/640x360/202" alt="Fios de lã coloridos"
+                            class="rounded-2xl shadow-lg w-full h-64 object-cover mt-8">
                     </div>
-                    <div class="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-coral-light rounded-3xl rotate-3"></div>
+                    <div
+                        class="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-coral-light rounded-3xl rotate-3">
+                    </div>
                 </div>
-                
+
                 <div>
                     <p class="text-coral font-medium tracking-widest uppercase mb-4 text-sm">Nossa História</p>
                     <h2 class="text-4xl font-bold text-gray-800 mb-6">O toque humano em cada criação</h2>
                     <div class="space-y-4 text-gray-600 leading-relaxed">
                         <p>
-                            A <strong>FF Studio</strong> nasceu do amor pelo crochê e da vontade de transformar fios simples em peças que carregam afeto. Fundada por Fernanda, a marca representa anos de dedicação à arte manual.
+                            A <strong>FF Studio</strong> nasceu do amor pelo crochê e da vontade de transformar fios
+                            simples em peças que carregam afeto. Fundada por Fernanda, a marca representa anos de
+                            dedicação à arte manual.
                         </p>
                         <p>
-                            Acreditamos que o artesanal é um ato de resistência no mundo digital. Cada peça é única, com suas próprias imperfeições que as tornam perfeitas. Utilizamos fios de alta qualidade, priorizando materiais sustentáveis e processos conscientes.
+                            Acreditamos que o artesanal é um ato de resistência no mundo digital. Cada peça é única, com
+                            suas próprias imperfeições que as tornam perfeitas. Utilizamos fios de alta qualidade,
+                            priorizando materiais sustentáveis e processos conscientes.
                         </p>
                     </div>
-                    
+
                     <div class="mt-8 grid grid-cols-3 gap-6">
                         <div class="text-center">
                             <div class="text-3xl font-bold text-green mb-1">500+</div>
@@ -153,7 +186,37 @@
             <div class="text-center mb-16">
                 <p class="text-coral font-medium tracking-widest uppercase mb-4 text-sm">Coleções Exclusivas</p>
                 <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">Peças que Encantam</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Do boho chic ao minimalismo, nossas criações adaptam-se a diversos estilos, sempre mantendo a essência artesanal e acolhedora.</p>
+                <p class="text-gray-600 max-w-2xl mx-auto">Do boho chic ao minimalismo, nossas criações adaptam-se a
+                    diversos estilos, sempre mantendo a essência artesanal e acolhedora.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover p-4">
+                    <img src="https://static.photos/craft/640x360/301"
+                        class="w-full h-64 object-cover rounded-2xl mb-4">
+
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                        Bolsa Floral
+                    </h3>
+
+                    <p class="text-gray-600 mb-4">
+                        Bolsa artesanal em crochê com acabamento premium.
+                    </p>
+
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-coral">
+                            R$ 89,90
+                        </span>
+
+                        <button class="add-cart bg-coral text-white px-5 py-2 rounded-full hover:opacity-90 transition"
+                            data-name="Bolsa Floral" data-price="89.90">
+
+                            Adicionar
+                        </button>
+                    </div>
+                </div>
+
             </div>
 
         </div>
@@ -169,31 +232,38 @@
 
             <div class="grid md:grid-cols-4 gap-8">
                 <div class="text-center group">
-                    <div class="w-20 h-20 mx-auto mb-6 bg-coral-light rounded-full flex items-center justify-center group-hover:bg-coral transition-colors duration-300">
-                        <i data-lucide="message-circle" class="w-8 h-8 text-coral group-hover:text-white transition-colors"></i>
+                    <div
+                        class="w-20 h-20 mx-auto mb-6 bg-coral-light rounded-full flex items-center justify-center group-hover:bg-coral transition-colors duration-300">
+                        <i data-lucide="message-circle"
+                            class="w-8 h-8 text-coral group-hover:text-white transition-colors"></i>
                     </div>
                     <h3 class="text-lg font-bold text-gray-800 mb-2">1. Consulta</h3>
                     <p class="text-gray-600 text-sm">Entendemos suas necessidades e preferências de cores e estilo.</p>
                 </div>
 
                 <div class="text-center group">
-                    <div class="w-20 h-20 mx-auto mb-6 bg-coral-light rounded-full flex items-center justify-center group-hover:bg-coral transition-colors duration-300">
-                        <i data-lucide="palette" class="w-8 h-8 text-coral group-hover:text-white transition-colors"></i>
+                    <div
+                        class="w-20 h-20 mx-auto mb-6 bg-coral-light rounded-full flex items-center justify-center group-hover:bg-coral transition-colors duration-300">
+                        <i data-lucide="palette"
+                            class="w-8 h-8 text-coral group-hover:text-white transition-colors"></i>
                     </div>
                     <h3 class="text-lg font-bold text-gray-800 mb-2">2. Seleção</h3>
                     <p class="text-gray-600 text-sm">Escolhemos os melhores fios e materiais para sua peça.</p>
                 </div>
 
                 <div class="text-center group">
-                    <div class="w-20 h-20 mx-auto mb-6 bg-coral-light rounded-full flex items-center justify-center group-hover:bg-coral transition-colors duration-300">
-                        <i data-lucide="scissors" class="w-8 h-8 text-coral group-hover:text-white transition-colors"></i>
+                    <div
+                        class="w-20 h-20 mx-auto mb-6 bg-coral-light rounded-full flex items-center justify-center group-hover:bg-coral transition-colors duration-300">
+                        <i data-lucide="scissors"
+                            class="w-8 h-8 text-coral group-hover:text-white transition-colors"></i>
                     </div>
                     <h3 class="text-lg font-bold text-gray-800 mb-2">3. Criação</h3>
                     <p class="text-gray-600 text-sm">Cada ponto é feito manualmente com atenção aos detalhes.</p>
                 </div>
 
                 <div class="text-center group">
-                    <div class="w-20 h-20 mx-auto mb-6 bg-coral-light rounded-full flex items-center justify-center group-hover:bg-coral transition-colors duration-300">
+                    <div
+                        class="w-20 h-20 mx-auto mb-6 bg-coral-light rounded-full flex items-center justify-center group-hover:bg-coral transition-colors duration-300">
                         <i data-lucide="gift" class="w-8 h-8 text-coral group-hover:text-white transition-colors"></i>
                     </div>
                     <h3 class="text-lg font-bold text-gray-800 mb-2">4. Entrega</h3>
@@ -215,22 +285,28 @@
 
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
                 <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer">
-                    <img src="https://static.photos/craft/320x240/501" alt="Instagram" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                    <img src="https://static.photos/craft/320x240/501" alt="Instagram"
+                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
                 </div>
                 <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer">
-                    <img src="https://static.photos/craft/320x240/502" alt="Instagram" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                    <img src="https://static.photos/craft/320x240/502" alt="Instagram"
+                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
                 </div>
                 <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer">
-                    <img src="https://static.photos/craft/320x240/503" alt="Instagram" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                    <img src="https://static.photos/craft/320x240/503" alt="Instagram"
+                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
                 </div>
                 <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer">
-                    <img src="https://static.photos/craft/320x240/504" alt="Instagram" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                    <img src="https://static.photos/craft/320x240/504" alt="Instagram"
+                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
                 </div>
                 <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer hidden md:block">
-                    <img src="https://static.photos/craft/320x240/505" alt="Instagram" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                    <img src="https://static.photos/craft/320x240/505" alt="Instagram"
+                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
                 </div>
                 <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer hidden md:block">
-                    <img src="https://static.photos/craft/320x240/506" alt="Instagram" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                    <img src="https://static.photos/craft/320x240/506" alt="Instagram"
+                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
                 </div>
             </div>
         </div>
@@ -244,7 +320,8 @@
                     <p class="text-coral font-medium tracking-widest uppercase mb-4 text-sm">Encomendas</p>
                     <h2 class="text-4xl font-bold text-gray-800 mb-6">Vamos criar algo especial juntas?</h2>
                     <p class="text-gray-600 mb-8 leading-relaxed">
-                        Aceitamos encomendas personalizadas. Me conte sua ideia e vamos transformá-la em uma peça única e exclusiva, feita especialmente para você ou para presentear alguém especial.
+                        Aceitamos encomendas personalizadas. Me conte sua ideia e vamos transformá-la em uma peça única
+                        e exclusiva, feita especialmente para você ou para presentear alguém especial.
                     </p>
 
                     <div class="space-y-6">
@@ -280,7 +357,19 @@
                     </div>
                 </div>
 
-                
+
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-coral-light/20 pb-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="relative z-10 -mb-8 flex justify-center">
+                <a id="whatsapp-btn" href="#" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center gap-3 bg-green text-white px-8 py-4 rounded-full font-semibold shadow-lg btn-hover">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    Pedir no WhatsApp
+                </a>
             </div>
         </div>
     </section>
@@ -302,15 +391,19 @@
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div class="col-span-1 md:col-span-2">
                     <h3 class="text-2xl font-bold mb-4"><span class="text-coral">FF</span> Studio</h3>
-                    <p class="text-gray-400 mb-6 max-w-sm">Transformando fios em arte desde 2019. Peças exclusivas feitas à mão com amor, dedicação e muito carinho.</p>
+                    <p class="text-gray-400 mb-6 max-w-sm">Transformando fios em arte desde 2019. Peças exclusivas
+                        feitas à mão com amor, dedicação e muito carinho.</p>
                     <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-coral transition-colors">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-coral transition-colors">
                             <i data-lucide="instagram" class="w-5 h-5"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-coral transition-colors">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-coral transition-colors">
                             <i data-lucide="facebook" class="w-5 h-5"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-coral transition-colors">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-coral transition-colors">
                             <i data-lucide="youtube" class="w-5 h-5"></i>
                         </a>
                     </div>
@@ -338,7 +431,8 @@
 
             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                 <p class="text-gray-500 text-sm">© 2024 FF Studio. Todos os direitos reservados.</p>
-                <p class="text-gray-500 text-sm">Feito com <i data-lucide="heart" class="w-3 h-3 inline text-coral fill-current"></i> e muito crochê</p>
+                <p class="text-gray-500 text-sm">Feito com <i data-lucide="heart"
+                        class="w-3 h-3 inline text-coral fill-current"></i> e muito crochê</p>
             </div>
         </div>
     </footer>
@@ -418,6 +512,63 @@
         document.querySelectorAll('.card-hover, .group').forEach((el) => {
             observer.observe(el);
         });
+
+
+        // ==========================
+        // CARRINHO
+        // ==========================
+
+        function getCart() {
+            return JSON.parse(localStorage.getItem('cart')) || [];
+        }
+
+        function saveCart(cart) {
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        function updateCartCount() {
+            const cart = getCart();
+
+            document.getElementById('cart-count').textContent =
+                cart.reduce((total, item) => total + item.quantity, 0);
+        }
+
+        // ==========================
+        // ADICIONAR AO CARRINHO
+        // ==========================
+
+        document.addEventListener('click', (e) => {
+
+            const button = e.target.closest('.add-cart');
+
+            if (!button) return;
+
+            const name = button.dataset.name;
+            const price = parseFloat(button.dataset.price);
+
+            const cart = getCart();
+
+            const existingProduct =
+                cart.find(item => item.name === name);
+
+            if (existingProduct) {
+
+                existingProduct.quantity += 1;
+
+            } else {
+
+                cart.push({
+                    name,
+                    price,
+                    quantity: 1
+                });
+            }
+
+            saveCart(cart);
+
+            updateCartCount();
+        });
     </script>
 </body>
+
 </html>
