@@ -425,7 +425,7 @@
     <!-- Contact Section -->
     <section id="contato" class="py-20 bg-coral-light/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-16">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div>
                     <p class="text-coral font-medium tracking-widest uppercase mb-4 text-sm">Encomendas</p>
                     <h2 class="text-4xl font-bold text-gray-800 mb-6">Vamos criar algo especial juntas?</h2>
@@ -464,24 +464,31 @@
                                 <p class="font-medium text-gray-800">Salto - SP (Enviamos para todo Brasil)</p>
                             </div>
                         </div>
+                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <div class="flex justify-center">
+                                <a id="whatsapp-btn" href="#" target="_blank" rel="noopener noreferrer"
+                                    class="inline-flex items-center gap-3 bg-green text-white px-8 py-4 rounded-full font-semibold shadow-lg btn-hover">
+                                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                                    Pedir no WhatsApp
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-
+                <div class="relative">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+                        <img src="../images/Crochê/B7.jpg" alt="Peças artesanais em crochê"
+                            class="w-full h-auto object-cover rounded-3xl">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="bg-coral-light/20 pb-4">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="relative z-10 -mb-8 flex justify-center">
-                <a id="whatsapp-btn" href="#" target="_blank" rel="noopener noreferrer"
-                    class="inline-flex items-center gap-3 bg-green text-white px-8 py-4 rounded-full font-semibold shadow-lg btn-hover">
-                    <i data-lucide="message-circle" class="w-5 h-5"></i>
-                    Pedir no WhatsApp
-                </a>
-            </div>
-        </div>
+
     </section>
 
 
@@ -530,7 +537,7 @@
         lucide.createIcons();
 
         const phone = "5514988082038";
-        const message = "Olá, tenho interesse no sistema!";
+        const message = "Olá! Gostaria de conhecer melhor os produtos e possibilidades de encomendas personalizadas. 🧵";
         const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
         console.log(whatsappUrl);
