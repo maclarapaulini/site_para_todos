@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo | Studio FF</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="icon" type="image/png" href="../images/Logo_StudioFF_4.png">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body class="antialiased texture-overlay bg-rose">
+
+    <!-- Navegação -->
+    <nav class="fixed w-full z-50 nav-blur border-b border-orange-100 transition-all duration-300 bg-white" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="flex justify-between items-center h-20">
+
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <img src="../images/Logo_StudioFF.png" alt="Logo FF Studio" class="h-10 w-auto">
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+
+                    <a href="index.html"
+                        class="text-gray-700 hover:text-coral transition-colors duration-300 text-sm uppercase tracking-wider">
+                        Início
+                    </a>
+
+                    <a href="catalogo.html"
+                        class="bg-coral text-white px-6 py-2 rounded-full text-sm uppercase tracking-wider btn-hover">
+                        Catálogo
+                    </a>
+
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-coral focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-orange-100">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+
+                <a href="index.html"
+                    class="block px-3 py-2 text-gray-700 hover:text-coral hover:bg-orange-50 rounded-md">
+                    Início
+                </a>
+
+                <a href="catalogo.html"
+                    class="block px-3 py-2 text-coral font-semibold">
+                    Catálogo
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cabeçalho do Catálogo -->
+    <section class="pt-32 pb-16 bg-rose">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+            <p class="text-coral font-medium tracking-widest uppercase mb-4 text-sm">
+                Studio Feito à Mão
+            </p>
+
+            <h1 class="text-5xl lg:text-6xl font-bold text-gray-800 mb-6">
+                Catálogo de Produtos
+            </h1>
+
+            <p class="text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                Conheça nossas peças artesanais feitas em crochê. Escolha seus produtos favoritos e adicione ao
+                carrinho para finalizar seu pedido.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- Produtos -->
+    <section class="pb-20 bg-rose">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Produto 1 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover p-4">
+
+                    <img src="../images/Crochê/B1.jpg"
+                        alt="Bolsa Floral"
+                        class="w-full h-72 object-cover rounded-2xl mb-4">
+
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                        Bolsa Floral
+                    </h3>
+
+                    <p class="text-gray-600 mb-4">
+                        Bolsa artesanal em crochê com acabamento delicado e elegante.
+                    </p>
+
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-coral">
+                            R$ 89,90
+                        </span>
+
+                        <button
+                            class="add-cart bg-coral text-white px-5 py-2 rounded-full hover:opacity-90 transition btn-hover"
+                            data-name="Bolsa Floral"
+                            data-price="89.90">
+                            Adicionar
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- Produto 2 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover p-4">
+
+                    <img src="../images/Crochê/B2.jpg"
+                        alt="Bolsa Elegance"
+                        class="w-full h-72 object-cover rounded-2xl mb-4">
+
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                        Bolsa Elegance
+                    </h3>
+
+                    <p class="text-gray-600 mb-4">
+                        Modelo sofisticado, ideal para compor looks casuais e elegantes.
+                    </p>
+
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-coral">
+                            R$ 119,90
+                        </span>
+
+                        <button
+                            class="add-cart bg-coral text-white px-5 py-2 rounded-full hover:opacity-90 transition btn-hover"
+                            data-name="Bolsa Elegance"
+                            data-price="119.90">
+                            Adicionar
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- Produto 3 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover p-4">
+
+                    <img src="../images/Crochê/B4.jpg"
+                        alt="Bolsa Classic"
+                        class="w-full h-72 object-cover rounded-2xl mb-4">
+
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                        Bolsa Classic
+                    </h3>
+
+                    <p class="text-gray-600 mb-4">
+                        Peça minimalista feita à mão, perfeita para o dia a dia.
+                    </p>
+
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-coral">
+                            R$ 99,90
+                        </span>
+
+                        <button
+                            class="add-cart bg-coral text-white px-5 py-2 rounded-full hover:opacity-90 transition btn-hover"
+                            data-name="Bolsa Classic"
+                            data-price="99.90">
+                            Adicionar
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- Produto 4 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover p-4">
+
+                    <img src="../images/Crochê/B5.jpg"
+                        alt="Bolsa Boho"
+                        class="w-full h-72 object-cover rounded-2xl mb-4">
+
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                        Bolsa Boho
+                    </h3>
+
+                    <p class="text-gray-600 mb-4">
+                        Bolsa artesanal com estilo boho, leve e cheia de personalidade.
+                    </p>
+
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-coral">
+                            R$ 109,90
+                        </span>
+
+                        <button
+                            class="add-cart bg-coral text-white px-5 py-2 rounded-full hover:opacity-90 transition btn-hover"
+                            data-name="Bolsa Boho"
+                            data-price="109.90">
+                            Adicionar
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- Produto 5 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover p-4">
+
+                    <img src="../images/Crochê/Mesa_Posta.jpg"
+                        alt="Jogo de Mesa"
+                        class="w-full h-72 object-cover rounded-2xl mb-4">
+
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                        Jogo de Mesa
+                    </h3>
+
+                    <p class="text-gray-600 mb-4">
+                        Peça artesanal para decorar a mesa com charme e delicadeza.
+                    </p>
+
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-coral">
+                            R$ 79,90
+                        </span>
+
+                        <button
+                            class="add-cart bg-coral text-white px-5 py-2 rounded-full hover:opacity-90 transition btn-hover"
+                            data-name="Jogo de Mesa"
+                            data-price="79.90">
+                            Adicionar
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- Produto 6 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover p-4">
+
+                    <img src="../images/Crochê/B7.jpg"
+                        alt="Bolsa Artesanal"
+                        class="w-full h-72 object-cover rounded-2xl mb-4">
+
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                        Bolsa Artesanal
+                    </h3>
+
+                    <p class="text-gray-600 mb-4">
+                        Modelo exclusivo, feito manualmente com fios de alta qualidade.
+                    </p>
+
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-coral">
+                            R$ 129,90
+                        </span>
+
+                        <button
+                            class="add-cart bg-coral text-white px-5 py-2 rounded-full hover:opacity-90 transition btn-hover"
+                            data-name="Bolsa Artesanal"
+                            data-price="129.90">
+                            Adicionar
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Botão para carrinho -->
+    <section class="bg-rose pb-20">
+        <div class="text-center">
+            <a href="carrinho.html"
+                class="inline-flex items-center gap-2 bg-green text-white px-8 py-4 rounded-full font-medium btn-hover">
+                Ir para o Carrinho
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-4">
+                        <span class="text-coral">Studio</span> FF
+                    </h3>
+
+                    <p class="text-gray-400 mb-6 max-w-sm">
+                        Transformando fios em arte desde 2021. Peças exclusivas feitas à mão com amor, dedicação e
+                        muito carinho.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4 text-coral">
+                        Links Rápidos
+                    </h4>
+
+                    <ul class="space-y-2 text-gray-400">
+                        <li>
+                            <a href="index.html" class="hover:text-white transition-colors">
+                                Início
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="index.html#sobre" class="hover:text-white transition-colors">
+                                Sobre
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="catalogo.html" class="hover:text-white transition-colors">
+                                Catálogo
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="carrinho.html" class="hover:text-white transition-colors">
+                                Carrinho
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4 text-coral">
+                        Atendimento
+                    </h4>
+
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Seg - Sex: 9h às 18h</li>
+                        <li>Sáb: 9h às 13h</li>
+                        <li class="text-coral mt-4">contato@ffstudio.com.br</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">
+                    © 2026 Studio FF. Todos os direitos reservados.
+                </p>
+
+                <p class="text-gray-500 text-sm">
+                    Feito com
+                    <i data-lucide="heart" class="w-3 h-3 inline text-coral fill-current"></i>
+                    e muito crochê
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navbar = document.getElementById('navbar');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+
+        function getCart() {
+            return JSON.parse(localStorage.getItem('cart')) || [];
+        }
+
+        function saveCart(cart) {
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        function updateCartCount() {
+            const cart = getCart();
+
+            const cartCount = document.getElementById('cart-count');
+
+            if (cartCount) {
+                cartCount.textContent = cart.reduce((total, item) => total + item.quantity, 0);
+            }
+        }
+
+        document.addEventListener('click', (e) => {
+            const button = e.target.closest('.add-cart');
+
+            if (!button) return;
+
+            const name = button.dataset.name;
+            const price = parseFloat(button.dataset.price);
+
+            const cart = getCart();
+
+            const existingProduct = cart.find(item => item.name === name);
+
+            if (existingProduct) {
+                existingProduct.quantity += 1;
+            } else {
+                cart.push({
+                    name,
+                    price,
+                    quantity: 1
+                });
+            }
+
+            saveCart(cart);
+            updateCartCount();
+        });
+
+        updateCartCount();
+    </script>
+
+</body>
+
+</html>
