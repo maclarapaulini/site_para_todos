@@ -21,21 +21,27 @@
 <body class="antialiased texture-overlay bg-rose">
 
     <!-- Navegação -->
-    <nav class="fixed w-full z-50 nav-blur border-b border-orange-100 transition-all duration-300 bg-white" id="navbar">
+    <nav class="fixed w-full z-50 nav-blur border-b border-orange-100 transition-all duration-300 bg-white"
+        id="navbar">
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
             <div class="flex justify-between items-center h-20">
 
+                <!-- Logo -->
                 <div class="flex items-center">
                     <a href="index.html" class="flex items-center">
-                        <img src="../images/Logo_FFStudio.png" alt="Logo FF Studio" class="h-10 w-auto">
+                        <img src="../images/Logo_FFStudio.png"
+                            alt="Logo FF Studio"
+                            class="h-10 w-auto">
                     </a>
                 </div>
 
+                <!-- Menu Desktop -->
                 <div class="hidden md:flex items-center space-x-8">
 
                     <a href="index.html"
-                        class="text-gray-700 hover:text-coral transition-colors duration-300 text-sm uppercase tracking-wider">
+                        class="nav-link text-gray-700 hover:text-coral transition-colors duration-300 text-sm uppercase tracking-wider">
                         Início
                     </a>
 
@@ -44,19 +50,42 @@
                         Catálogo
                     </a>
 
+                    <!-- Carrinho -->
+                    <a href="carrinho.html"
+                        class="relative text-gray-700 hover:text-coral transition-colors duration-300">
+
+                        <i data-lucide="shopping-bag" class="w-6 h-6"></i>
+
+                        <span id="cart-count"
+                            class="absolute -top-2 -right-2 bg-coral text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
+                            0
+                        </span>
+
+                    </a>
+
                 </div>
 
+                <!-- Botão Mobile -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-coral focus:outline-none">
+
+                    <button id="mobile-menu-btn"
+                        class="text-gray-700 hover:text-coral focus:outline-none">
+
                         <i data-lucide="menu" class="w-6 h-6"></i>
+
                     </button>
+
                 </div>
 
             </div>
+
         </div>
 
+
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-orange-100">
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white border-t border-orange-100">
+
             <div class="px-4 pt-2 pb-6 space-y-2">
 
                 <a href="index.html"
@@ -69,12 +98,32 @@
                     Catálogo
                 </a>
 
+                <a href="carrinho.html"
+                    class="relative flex items-center gap-2 px-3 py-2 text-gray-700 hover:text-coral hover:bg-orange-50 rounded-md">
+
+                    <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+
+                    <span>
+                        Carrinho
+                    </span>
+
+                    <span id="cart-count-mobile"
+                        class="bg-coral text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
+                        0
+                    </span>
+
+                </a>
+
             </div>
+
         </div>
+
     </nav>
+
 
     <!-- Cabeçalho do Catálogo -->
     <section class="pt-32 pb-16 bg-rose">
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
             <p class="text-coral font-medium tracking-widest uppercase mb-4 text-sm">
@@ -91,13 +140,17 @@
             </p>
 
         </div>
+
     </section>
+
 
     <!-- Produtos -->
     <section class="pb-20 bg-rose">
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
 
                 <!-- Produto 1 -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover p-4">
@@ -115,6 +168,7 @@
                     </p>
 
                     <div class="flex justify-between items-center">
+
                         <span class="text-2xl font-bold text-coral">
                             R$ 89,90
                         </span>
@@ -125,9 +179,11 @@
                             data-price="89.90">
                             Adicionar
                         </button>
+
                     </div>
 
                 </div>
+
 
                 <!-- Produto 2 -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover p-4">
@@ -145,6 +201,7 @@
                     </p>
 
                     <div class="flex justify-between items-center">
+
                         <span class="text-2xl font-bold text-coral">
                             R$ 119,90
                         </span>
@@ -155,9 +212,11 @@
                             data-price="119.90">
                             Adicionar
                         </button>
+
                     </div>
 
                 </div>
+
 
                 <!-- Produto 3 -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover p-4">
@@ -175,6 +234,7 @@
                     </p>
 
                     <div class="flex justify-between items-center">
+
                         <span class="text-2xl font-bold text-coral">
                             R$ 99,90
                         </span>
@@ -185,9 +245,11 @@
                             data-price="99.90">
                             Adicionar
                         </button>
+
                     </div>
 
                 </div>
+
 
                 <!-- Produto 4 -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover p-4">
@@ -205,6 +267,7 @@
                     </p>
 
                     <div class="flex justify-between items-center">
+
                         <span class="text-2xl font-bold text-coral">
                             R$ 109,90
                         </span>
@@ -215,9 +278,11 @@
                             data-price="109.90">
                             Adicionar
                         </button>
+
                     </div>
 
                 </div>
+
 
                 <!-- Produto 5 -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover p-4">
@@ -235,6 +300,7 @@
                     </p>
 
                     <div class="flex justify-between items-center">
+
                         <span class="text-2xl font-bold text-coral">
                             R$ 79,90
                         </span>
@@ -245,9 +311,11 @@
                             data-price="79.90">
                             Adicionar
                         </button>
+
                     </div>
 
                 </div>
+
 
                 <!-- Produto 6 -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover p-4">
@@ -265,6 +333,7 @@
                     </p>
 
                     <div class="flex justify-between items-center">
+
                         <span class="text-2xl font-bold text-coral">
                             R$ 129,90
                         </span>
@@ -275,6 +344,7 @@
                             data-price="129.90">
                             Adicionar
                         </button>
+
                     </div>
 
                 </div>
@@ -282,26 +352,38 @@
             </div>
 
         </div>
+
     </section>
+
 
     <!-- Botão para carrinho -->
     <section class="bg-rose pb-20">
+
         <div class="text-center">
+
             <a href="carrinho.html"
                 class="inline-flex items-center gap-2 bg-green text-white px-8 py-4 rounded-full font-medium btn-hover">
+
                 Ir para o Carrinho
+
                 <i data-lucide="arrow-right" class="w-4 h-4"></i>
+
             </a>
+
         </div>
+
     </section>
+
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
             <div class="grid md:grid-cols-4 gap-8 mb-8">
 
                 <div class="col-span-1 md:col-span-2">
+
                     <h3 class="text-2xl font-bold mb-4">
                         <span class="text-coral">FF</span> Studio
                     </h3>
@@ -310,135 +392,385 @@
                         Transformando fios em arte desde 2021. Peças exclusivas feitas à mão com amor, dedicação e
                         muito carinho.
                     </p>
+
                 </div>
 
+
                 <div>
+
                     <h4 class="font-bold mb-4 text-coral">
                         Links Rápidos
                     </h4>
 
                     <ul class="space-y-2 text-gray-400">
+
                         <li>
-                            <a href="index.html" class="hover:text-white transition-colors">
+                            <a href="index.html"
+                                class="hover:text-white transition-colors">
                                 Início
                             </a>
                         </li>
 
                         <li>
-                            <a href="index.html#sobre" class="hover:text-white transition-colors">
+                            <a href="index.html#sobre"
+                                class="hover:text-white transition-colors">
                                 Sobre
                             </a>
                         </li>
 
                         <li>
-                            <a href="catalogo.html" class="hover:text-white transition-colors">
+                            <a href="catalogo.html"
+                                class="hover:text-white transition-colors">
                                 Catálogo
                             </a>
                         </li>
 
                         <li>
-                            <a href="carrinho.html" class="hover:text-white transition-colors">
+                            <a href="carrinho.html"
+                                class="hover:text-white transition-colors">
                                 Carrinho
                             </a>
                         </li>
+
                     </ul>
+
                 </div>
 
+
                 <div>
+
                     <h4 class="font-bold mb-4 text-coral">
                         Atendimento
                     </h4>
 
                     <ul class="space-y-2 text-gray-400">
-                        <li>Seg - Sex: 9h às 18h</li>
-                        <li>Sáb: 9h às 13h</li>
-                        <li class="text-coral mt-4">contato@ffstudio.com.br</li>
+
+                        <li>
+                            Seg - Sex: 9h às 18h
+                        </li>
+
+                        <li>
+                            Sáb: 9h às 13h
+                        </li>
+
+                        <li class="text-coral mt-4">
+                            contato@ffstudio.com.br
+                        </li>
+
                     </ul>
+
                 </div>
 
             </div>
 
+
             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+
                 <p class="text-gray-500 text-sm">
                     © 2026 FF Studio. Todos os direitos reservados.
                 </p>
 
                 <p class="text-gray-500 text-sm">
+
                     Feito com
-                    <i data-lucide="heart" class="w-3 h-3 inline text-coral fill-current"></i>
+
+                    <i data-lucide="heart"
+                        class="w-3 h-3 inline text-coral fill-current"></i>
+
                     e muito crochê
+
                 </p>
+
             </div>
 
         </div>
+
     </footer>
 
+
+    <!-- POP-UP: Produto adicionado -->
+    <div id="cart-modal"
+        class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/40 backdrop-blur-sm px-4">
+
+        <div id="cart-modal-content"
+            class="bg-white rounded-3xl shadow-2xl max-w-md w-full p-8 text-center relative transform transition-all">
+
+            <!-- Botão fechar -->
+            <button id="close-cart-modal"
+                class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 transition-colors">
+
+                <i data-lucide="x" class="w-5 h-5"></i>
+
+            </button>
+
+
+            <!-- Ícone -->
+            <div class="w-16 h-16 mx-auto mb-5 rounded-full bg-orange-50 flex items-center justify-center">
+
+                <i data-lucide="shopping-bag"
+                    class="w-8 h-8 text-coral"></i>
+
+            </div>
+
+
+            <h2 class="text-2xl font-bold text-gray-800 mb-2">
+                Produto adicionado!
+            </h2>
+
+
+            <p class="text-gray-600 mb-2">
+                <span id="modal-product-name" class="font-semibold text-gray-800"></span>
+                foi adicionado ao seu carrinho.
+            </p>
+
+
+            <p class="text-gray-500 text-sm mb-7">
+                Deseja continuar comprando ou ir para o carrinho?
+            </p>
+
+
+            <!-- Botões -->
+            <div class="flex flex-col sm:flex-row gap-3">
+
+                <button id="continue-shopping"
+                    class="flex-1 border border-coral text-coral px-5 py-3 rounded-full font-medium hover:bg-orange-50 transition-colors">
+                    Continuar comprando
+                </button>
+
+
+                <a href="carrinho.html"
+                    class="flex-1 bg-coral text-white px-5 py-3 rounded-full font-medium hover:opacity-90 transition btn-hover flex items-center justify-center">
+                    Ir para o carrinho
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
     <script>
+
+        // Inicializa os ícones Lucide
         lucide.createIcons();
+
+
+        // =========================
+        // MENU MOBILE
+        // =========================
 
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const navbar = document.getElementById('navbar');
 
+
         mobileMenuBtn.addEventListener('click', () => {
+
             mobileMenu.classList.toggle('hidden');
+
         });
+
+
+        // =========================
+        // EFEITO DA NAVBAR
+        // =========================
 
         window.addEventListener('scroll', () => {
+
             if (window.scrollY > 50) {
+
                 navbar.classList.add('shadow-md');
+
             } else {
+
                 navbar.classList.remove('shadow-md');
+
             }
+
         });
 
+
+        // =========================
+        // CARRINHO
+        // =========================
+
         function getCart() {
+
             return JSON.parse(localStorage.getItem('cart')) || [];
+
         }
+
 
         function saveCart(cart) {
+
             localStorage.setItem('cart', JSON.stringify(cart));
+
         }
 
+
+        // Atualiza o número do carrinho
         function updateCartCount() {
+
             const cart = getCart();
+
+            const totalItems = cart.reduce(
+                (total, item) => total + item.quantity,
+                0
+            );
+
 
             const cartCount = document.getElementById('cart-count');
 
+            const cartCountMobile = document.getElementById('cart-count-mobile');
+
+
             if (cartCount) {
-                cartCount.textContent = cart.reduce((total, item) => total + item.quantity, 0);
+
+                cartCount.textContent = totalItems;
+
             }
+
+
+            if (cartCountMobile) {
+
+                cartCountMobile.textContent = totalItems;
+
+            }
+
         }
 
+
+        // =========================
+        // POP-UP
+        // =========================
+
+        const cartModal = document.getElementById('cart-modal');
+        const closeCartModal = document.getElementById('close-cart-modal');
+        const continueShopping = document.getElementById('continue-shopping');
+        const modalProductName = document.getElementById('modal-product-name');
+
+
+        // Abre o pop-up
+        function openCartModal(productName) {
+
+            modalProductName.textContent = productName;
+
+            cartModal.classList.remove('hidden');
+            cartModal.classList.add('flex');
+
+            document.body.classList.add('overflow-hidden');
+
+        }
+
+
+        // Fecha o pop-up
+        function closeModal() {
+
+            cartModal.classList.add('hidden');
+            cartModal.classList.remove('flex');
+
+            document.body.classList.remove('overflow-hidden');
+
+        }
+
+
+        closeCartModal.addEventListener('click', closeModal);
+
+        continueShopping.addEventListener('click', closeModal);
+
+
+        // Fecha clicando fora do pop-up
+        cartModal.addEventListener('click', (e) => {
+
+            if (e.target === cartModal) {
+
+                closeModal();
+
+            }
+
+        });
+
+
+        // Fecha com a tecla ESC
+        document.addEventListener('keydown', (e) => {
+
+            if (e.key === 'Escape' && !cartModal.classList.contains('hidden')) {
+
+                closeModal();
+
+            }
+
+        });
+
+
+        // =========================
+        // ADICIONAR PRODUTO
+        // =========================
+
         document.addEventListener('click', (e) => {
+
             const button = e.target.closest('.add-cart');
+
 
             if (!button) return;
 
+
             const name = button.dataset.name;
+
             const price = parseFloat(button.dataset.price);
+
 
             const cart = getCart();
 
-            const existingProduct = cart.find(item => item.name === name);
+
+            const existingProduct = cart.find(
+                item => item.name === name
+            );
+
 
             if (existingProduct) {
+
                 existingProduct.quantity += 1;
+
             } else {
+
                 cart.push({
-                    name,
-                    price,
+
+                    name: name,
+
+                    price: price,
+
                     quantity: 1
+
                 });
+
             }
 
+
+            // Salva o carrinho
             saveCart(cart);
+
+
+            // Atualiza o contador
             updateCartCount();
+
+
+            // Abre o pop-up
+            openCartModal(name);
+
         });
 
+
+        // =========================
+        // INICIALIZAÇÃO
+        // =========================
+
         updateCartCount();
+
     </script>
 
 </body>
 
 </html>
+
