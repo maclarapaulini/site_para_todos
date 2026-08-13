@@ -221,56 +221,40 @@ async function getOrCreateCart() {
 
     let cartId = getCartId();
 
+    // Já existe um carrinho para esta sessão
     if (cartId) {
         return cartId;
     }
 
+    const now = new Date().toISOString();
+
     const { data, error } = await supabase
         .from('carts')
-        .insert({})
+        .insert({
+            user_id: 'f85672ef-f499-4a39-9c24-63d0c0756dd2',
+            created_at: now,
+            updated_at: now
+        })
         .select()
         .single();
 
     if (error) {
         console.error('Erro ao criar carrinho:', error);
+        console.error('Código:', error.code);
+        console.error('Mensagem:', error.message);
+        console.error('Detalhes:', error.details);
+        console.error('Hint:', error.hint);
+
         return null;
     }
+
+    console.log('Carrinho criado:', data);
 
     cartId = data.id;
 
     localStorage.setItem('cart_id', cartId);
 
     return cartId;
-}
-
-async function getCartItems() {
-
-    const cartId = localStorage.getItem('cart_id');
-
-    if (!cartId) {
-        return [];
-    }
-
-    const { data, error } = await supabase
-        .from('cart_items')
-        .select(`
-            id,
-            quantity,
-            product_id
-        `)
-        .eq('cart_id', cartId);
-
-    if (error) {
-
-        console.error(
-            'Erro ao buscar itens do carrinho:',
-            error
-        );
-
-        return [];
-    }
-
-    return data;
 }
 
 async function addProductToCart(productId) {
@@ -287,7 +271,7 @@ async function addProductToCart(productId) {
             .from('cart_items')
             .select('id, quantity')
             .eq('cart_id', cartId)
-            .eq('product_variant_id', productId)
+            .eq('product_id', productId)
             .maybeSingle();
 
     if (selectError) {
@@ -332,7 +316,7 @@ async function addProductToCart(productId) {
             .from('cart_items')
             .insert({
                 cart_id: cartId,
-                product_variant_id: productId,
+                product_id: productId,
                 quantity: 1
             });
 

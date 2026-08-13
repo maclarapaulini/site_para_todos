@@ -168,7 +168,7 @@ async function testInsertCartItem() {
         .from('cart_items')
         .insert({
             cart_id: '80643252-4555-41b3-8712-08bfeeb16f2b',
-            product_variant_id: '3615b72b-4abc-423c-9012-e8f172228adf',
+            product_id: '3615b72b-4abc-423c-9012-e8f172228adf',
             quantity: 4
         })
         .select();
