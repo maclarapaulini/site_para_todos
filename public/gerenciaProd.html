@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Produtos | FF Studio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="icon" type="image/png" href="../images/Logo_FFStudio_2.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body class="bg-[#FDF8F3] min-h-screen text-gray-800">
+
+    <!-- Navegação -->
+    <nav class="bg-white shadow-sm border-b border-orange-100">
+        <div class="max-w-7xl mx-auto px-4 py-5 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="../images/Logo_FFStudio.png" alt="Logo FF Studio" class="h-10 w-auto">
+            </a>
+            <button onclick="history.back()" class="border border-coral text-coral px-5 py-2 rounded-full hover:bg-coral hover:text-white transition flex items-center gap-2">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                Voltar
+            </button>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main class="max-w-7xl mx-auto px-4 py-16">
+
+        <!-- Cabeçalho da Página -->
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-6">
+            <div>
+                <p class="text-coral font-medium tracking-widest uppercase mb-2 text-sm">Painel Administrativo</p>
+                <h1 class="text-4xl font-bold text-gray-800">Gerenciar produtos</h1>
+            </div>
+            
+            <a href="cadastroProd.html" class="bg-green text-white px-6 py-3 rounded-full font-medium hover:opacity-90 transition btn-hover flex items-center gap-2 shadow-md">
+                <i data-lucide="plus" class="w-5 h-5"></i>
+                Novo produto
+            </a>
+        </div>
+
+        <!-- Container da Tabela -->
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
+            
+            <!-- Barra de Busca e Filtros -->
+            <div class="p-6 border-b border-gray-100 flex flex-col sm:flex-row gap-4 justify-between items-center bg-gray-50/50">
+                <div class="relative w-full max-w-md">
+                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                        <i data-lucide="search" class="w-5 h-5 text-gray-400"></i>
+                    </div>
+                    <input type="text" class="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-coral focus:border-transparent transition-all" placeholder="Buscar pelo nome da peça...">
+                </div>
+            </div>
+
+            <!-- Tabela Responsiva -->
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-white border-b border-gray-100 text-sm tracking-wide text-gray-500 uppercase">
+                            <th class="px-6 py-4 font-semibold">Produto</th>
+                            <th class="px-6 py-4 font-semibold">Preço</th>
+                            <th class="px-6 py-4 font-semibold text-center">Estoque</th>
+                            <th class="px-6 py-4 font-semibold text-center">Status</th>
+                            <th class="px-6 py-4 font-semibold text-right">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-produtos" class="divide-y divide-gray-100">
+                        
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Rodapé da Tabela (Paginação) -->
+            <div class="p-6 border-t border-gray-100 flex justify-between items-center text-sm text-gray-500">
+                <p id="contador-produtos">Carregando...</p>
+                <div class="flex gap-2">
+                    <button class="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition opacity-50 cursor-not-allowed">Anterior</button>
+                    <button class="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition opacity-50 cursor-not-allowed">Próxima</button>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script type="module" src="../javascript/pageFunctions/gerenciaProd.js"></script>
+</body>
+
+</html>
