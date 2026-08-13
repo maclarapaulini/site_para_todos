@@ -71,7 +71,7 @@ async function loadProducts() {
                     <button onclick="editProduct('${product.id}')" class="p-2 text-gray-400 hover:text-blue-500 hover:bg-blue-50 rounded-lg transition" title="Editar">
                         <i data-lucide="pencil" class="w-5 h-5"></i>
                     </button>
-                    <button onclick="deleteProduct('${product.id}')" class="p-2 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-lg transition" title="Excluir">
+                    <button onclick="deleteProduct('${product.id}', '${product.name}')" class="p-2 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-lg transition" title="Excluir">
                         <i data-lucide="trash-2" class="w-5 h-5"></i>
                     </button>
                 </div>
@@ -85,9 +85,9 @@ async function loadProducts() {
 }
 
 // Função para excluir do Supabase (Atrelada ao window para funcionar no onclick do HTML injetado)
-window.deleteProduct = async function(id) {
-    // Pede confirmação de segurança antes de apagar
-    if (!confirm('Tem certeza que deseja excluir este produto? Essa ação apagará o item permanentemente.')) {
+window.deleteProduct = async function(id, name) {
+    // Agora o alerta mostra o nome do produto dinamicamente
+    if (!confirm(`Tem certeza que deseja excluir a peça "${name}"?\n\nEssa ação apagará o item permanentemente do catálogo.`)) {
         return;
     }
 
@@ -98,10 +98,10 @@ window.deleteProduct = async function(id) {
 
     if (error) {
         console.error('Erro ao excluir:', error);
-        alert('Erro ao excluir o produto. Ele pode estar atrelado a um pedido existente.');
+        alert(`Não foi possível excluir "${name}". A peça pode estar atrelada a um pedido existente no carrinho.`);
     } else {
-        alert('Produto excluído com sucesso!');
-        loadProducts(); // Recarrega a tabela imediatamente
+        alert(`A peça "${name}" foi excluída com sucesso!`);
+        loadProducts(); // Recarrega a tabela imediatamente para sumir com o produto da tela
     }
 };
 
