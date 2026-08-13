@@ -1,4 +1,4 @@
-import { supabase } from '../javascript/database/supaBase.js';
+import { supabase } from '../database/supaBase.js';
 
 lucide.createIcons();
 
@@ -27,6 +27,7 @@ function renderCart() {
 
     if (cart.length === 0) {
         emptyCart.classList.remove('hidden');
+        // testInsertCartItem();
         updateWhatsappButton([]);
         return;
     }
@@ -91,6 +92,7 @@ function renderCart() {
     cartTotal.textContent =
         `R$ ${total.toFixed(2).replace('.', ',')}`;
 
+    testInsertCartItem();
     updateWhatsappButton(cart);
 }
 
@@ -134,10 +136,6 @@ function decreaseQuantity(index) {
     renderCart();
 }
 
-// ==========================
-// WHATSAPP
-// ==========================
-
 function updateWhatsappButton(cart) {
 
     // const phone = "5511939288314";
@@ -159,12 +157,9 @@ function updateWhatsappButton(cart) {
 
     message += `%0ATotal: R$ ${total.toFixed(2)}`;
 
-    const whatsappUrl =
-        `https://wa.me/${phone}?text=${message}`;
+    const whatsappUrl = `https://wa.me/${phone}?text=${message}`;
 
-    const whatsappButton =
-        document.getElementById('whatsapp-btn');
-
+    const whatsappButton = document.getElementById('whatsapp-btn');
     whatsappButton.href = whatsappUrl;
 }
 
@@ -172,19 +167,19 @@ async function testInsertCartItem() {
     const { data, error } = await supabase
         .from('cart_items')
         .insert({
-            cart_id: '00000000-0000-0000-0000-000000000000',
-            product_variant_id: '00000000-0000-0000-0000-000000000000',
-            quantity: 1
+            cart_id: '80643252-4555-41b3-8712-08bfeeb16f2b',
+            product_variant_id: '3615b72b-4abc-423c-9012-e8f172228adf',
+            quantity: 4
         })
         .select();
-
-    console.log('insert data:', data, 'insert error:', error);
 }
 
-// window.removeItem = removeItem;
-// window.increaseQuantity = increaseQuantity;
-// window.decreaseQuantity = decreaseQuantity;
+window.removeItem = removeItem;
+window.increaseQuantity = increaseQuantity;
+window.decreaseQuantity = decreaseQuantity;
 
+const testButton = document.getElementById('test-button');
+testButton.addEventListener('click', testInsertCartItem);
 
 // testInsertCartItem();
 renderCart();
