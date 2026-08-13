@@ -219,53 +219,58 @@ function getCartId() {
 
 async function getOrCreateCart() {
 
-    let cartId = getCartId();
+    const userId = 'f85672ef-f499-4a39-9c24-63d0c0756dd2';
 
-    // Já existe um carrinho para esta sessão
-    if (cartId) {
-        return cartId;
+    const { data: existingCart, error: selectError } =
+        await supabase
+            .from('carts')
+            .select('id')
+            .eq('user_id', userId)
+            .maybeSingle();
+
+    if (selectError) {
+        console.error('Erro ao buscar carrinho:', selectError);
+        return null;
+    }
+
+    if (existingCart) {
+        return existingCart.id;
     }
 
     const now = new Date().toISOString();
 
-    const { data, error } = await supabase
-        .from('carts')
-        .insert({
-            user_id: 'f85672ef-f499-4a39-9c24-63d0c0756dd2',
-            created_at: now,
-            updated_at: now
-        })
-        .select()
-        .single();
+    const { data: newCart, error: insertError } =
+        await supabase
+            .from('carts')
+            .insert({
+                user_id: userId,
+                created_at: now,
+                updated_at: now
+            })
+            .select('id')
+            .single();
 
-    if (error) {
-        console.error('Erro ao criar carrinho:', error);
-        console.error('Código:', error.code);
-        console.error('Mensagem:', error.message);
-        console.error('Detalhes:', error.details);
-        console.error('Hint:', error.hint);
-
+    if (insertError) {
+        console.error('Erro ao criar carrinho:', insertError);
         return null;
     }
 
-    console.log('Carrinho criado:', data);
-
-    cartId = data.id;
-
-    localStorage.setItem('cart_id', cartId);
-
-    return cartId;
+    return newCart.id;
 }
 
 async function addProductToCart(productId) {
 
+    // Busca ou cria o carrinho do usuário
     const cartId = await getOrCreateCart();
 
     if (!cartId) {
         return false;
     }
 
-    // Verifica se o produto já está no carrinho
+    console.log('Cart ID:', cartId);
+    console.log('Product ID:', productId);
+
+    // Verifica se o produto já está nesse carrinho
     const { data: existingItem, error: selectError } =
         await supabase
             .from('cart_items')
@@ -277,24 +282,30 @@ async function addProductToCart(productId) {
     if (selectError) {
 
         console.error(
-            'Erro ao verificar item do carrinho:',
+            'Erro ao verificar produto no carrinho:',
             selectError
         );
 
         return false;
     }
 
-
     // Produto já existe → aumenta quantidade
     if (existingItem) {
 
-        const { error: updateError } =
+        console.log(
+            'Produto já existe. Quantidade atual:',
+            existingItem.quantity
+        );
+
+        const { data, error: updateError } =
             await supabase
                 .from('cart_items')
                 .update({
                     quantity: existingItem.quantity + 1
                 })
-                .eq('id', existingItem.id);
+                .eq('id', existingItem.id)
+                .select()
+                .single();
 
         if (updateError) {
 
@@ -306,29 +317,40 @@ async function addProductToCart(productId) {
             return false;
         }
 
+        console.log(
+            'Quantidade atualizada:',
+            data
+        );
+
         return true;
     }
 
-
-    // Produto ainda não existe → cria item
-    const { error: insertError } =
+    // Produto ainda não existe → cria uma nova linha
+    const { data, error: insertError } =
         await supabase
             .from('cart_items')
             .insert({
                 cart_id: cartId,
                 product_id: productId,
                 quantity: 1
-            });
+            })
+            .select()
+            .single();
 
     if (insertError) {
 
         console.error(
-            'Erro ao inserir item:',
+            'Erro ao inserir produto no carrinho:',
             insertError
         );
 
         return false;
     }
+
+    console.log(
+        'Produto inserido no carrinho:',
+        data
+    );
 
     return true;
 }

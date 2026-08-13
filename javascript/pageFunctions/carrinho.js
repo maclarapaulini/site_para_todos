@@ -11,24 +11,16 @@ const emptyCart =
 const cartTotal =
     document.getElementById('cart-total');
 
-function getCart() {
-    return JSON.parse(localStorage.getItem('cart')) || [];
-}
-
-function saveCart(cart) {
-    localStorage.setItem('cart', JSON.stringify(cart));
-}
-
-function renderCart() {
-
-    const cart = getCart();
+function renderCart(cart) {
 
     cartItemsContainer.innerHTML = '';
 
     if (cart.length === 0) {
+
         emptyCart.classList.remove('hidden');
-        // testInsertCartItem();
+
         updateWhatsappButton([]);
+
         return;
     }
 
@@ -36,9 +28,11 @@ function renderCart() {
 
     let total = 0;
 
-    cart.forEach((item, index) => {
+    cart.forEach(item => {
 
-        total += item.price * item.quantity;
+        const subtotal = item.price * item.quantity;
+
+        total += subtotal;
 
         const product = document.createElement('div');
 
@@ -51,10 +45,10 @@ function renderCart() {
                 <h3 class="text-2xl font-bold text-gray-800">
                     ${item.name}
                 </h3>
+
                 <div class="flex items-center gap-3 mt-3">
 
-                    <button
-                        onclick="decreaseQuantity(${index})"
+                    <button onclick="decreaseQuantity('${item.cartItemId}')"
                         class="w-8 h-8 rounded-full bg-orange-100 text-coral font-bold hover:bg-orange-200 transition">
 
                         -
@@ -64,8 +58,7 @@ function renderCart() {
                         ${item.quantity}
                     </span>
 
-                    <button
-                        onclick="increaseQuantity(${index})"
+                    <button onclick="increaseQuantity('${item.cartItemId}')"
                         class="w-8 h-8 rounded-full bg-orange-100 text-coral font-bold hover:bg-orange-200 transition">
 
                         +
@@ -74,12 +67,11 @@ function renderCart() {
                 </div>
 
                 <p class="text-coral font-bold text-xl mt-2">
-                    R$ ${(item.price * item.quantity).toFixed(2).replace('.', ',')}
+                    R$ ${subtotal.toFixed(2).replace('.', ',')}
                 </p>
             </div>
 
-            <button
-                onclick="removeItem(${index})"
+            <button onclick="removeItem('${item.cartItemId}')"
                 class="bg-red-100 text-red-500 px-4 py-2 rounded-full hover:bg-red-200 transition">
 
                 Remover
@@ -92,48 +84,111 @@ function renderCart() {
     cartTotal.textContent =
         `R$ ${total.toFixed(2).replace('.', ',')}`;
 
-    testInsertCartItem();
     updateWhatsappButton(cart);
 }
 
-function removeItem(index) {
+async function updateCartItemQuantity(cartItemId, quantity) {
 
-    const cart = getCart();
+    if (quantity <= 0) {
 
-    cart.splice(index, 1);
+        const { error } = await supabase
+            .from('cart_items')
+            .delete()
+            .eq('id', cartItemId);
 
-    saveCart(cart);
-
-    renderCart();
-}
-
-function increaseQuantity(index) {
-
-    const cart = getCart();
-
-    cart[index].quantity += 1;
-
-    saveCart(cart);
-
-    renderCart();
-}
-
-function decreaseQuantity(index) {
-
-    const cart = getCart();
-
-    if (cart[index].quantity > 1) {
-
-        cart[index].quantity -= 1;
+        if (error) {
+            console.error('Erro ao remover item:', error);
+            return false;
+        }
 
     } else {
 
-        cart.splice(index, 1);
+        const { error } = await supabase
+            .from('cart_items')
+            .update({
+                quantity: quantity
+            })
+            .eq('id', cartItemId);
+
+        if (error) {
+            console.error(
+                'Erro ao atualizar quantidade:',
+                error
+            );
+
+            return false;
+        }
     }
 
-    saveCart(cart);
+    return true;
+}
 
-    renderCart();
+async function increaseQuantity(cartItemId) {
+
+    const cart = await getUserCart();
+
+    if (!cart) return;
+
+    const items = await getCartItems(cart.id);
+
+    const item = items.find(
+        item => item.id === cartItemId
+    );
+
+    if (!item) return;
+
+    const success = await updateCartItemQuantity(
+        cartItemId,
+        item.quantity + 1
+    );
+
+    if (success) {
+        await loadCart();
+    }
+}
+
+async function decreaseQuantity(cartItemId) {
+
+    const cart = await getUserCart();
+
+    if (!cart) return;
+
+    const items = await getCartItems(cart.id);
+
+    const item = items.find(
+        item => item.id === cartItemId
+    );
+
+    if (!item) return;
+
+    const success = await updateCartItemQuantity(
+        cartItemId,
+        item.quantity - 1
+    );
+
+    if (success) {
+        await loadCart();
+    }
+}
+
+async function removeItem(cartItemId) {
+
+    const { error } = await supabase
+        .from('cart_items')
+        .delete()
+        .eq('id', cartItemId);
+
+    if (error) {
+
+        console.error(
+            'Erro ao remover produto:',
+            error
+        );
+
+        return;
+    }
+
+    await loadCart();
 }
 
 function updateWhatsappButton(cart) {
@@ -163,23 +218,90 @@ function updateWhatsappButton(cart) {
     whatsappButton.href = whatsappUrl;
 }
 
-async function testInsertCartItem() {
+async function getUserCart() {
+
+    const userId = 'f85672ef-f499-4a39-9c24-63d0c0756dd2';
+
+    const { data, error } = await supabase
+        .from('carts')
+        .select('id')
+        .eq('user_id', userId)
+        .maybeSingle();
+
+    if (error) {
+
+        console.error(
+            'Erro ao buscar carrinho:',
+            error
+        );
+
+        return null;
+    }
+
+    return data;
+}
+
+async function getCartItems(cartId) {
+
     const { data, error } = await supabase
         .from('cart_items')
-        .insert({
-            cart_id: '80643252-4555-41b3-8712-08bfeeb16f2b',
-            product_id: '3615b72b-4abc-423c-9012-e8f172228adf',
-            quantity: 4
-        })
-        .select();
+        .select(`
+            id,
+            quantity,
+            product_id,
+            products (
+                id,
+                name,
+                description,
+                base_price,
+                image_url
+            )
+        `)
+        .eq('cart_id', cartId);
+
+    if (error) {
+
+        console.error(
+            'Erro ao buscar itens do carrinho:',
+            error
+        );
+
+        return [];
+    }
+
+    return data;
+}
+
+async function loadCart() {
+
+    const cart = await getUserCart();
+
+    // Usuário não possui carrinho
+    if (!cart) {
+        renderCart([]);
+        return;
+    }
+
+    console.log('Carrinho encontrado:', cart.id);
+
+    const cartItems = await getCartItems(cart.id);
+
+    console.log('Itens encontrados:', cartItems);
+
+    const items = cartItems.map(item => ({
+        cartItemId: item.id,
+        productId: item.product_id,
+        name: item.products.name,
+        price: Number(item.products.base_price),
+        quantity: item.quantity,
+        image_url: item.products.image_url
+    }));
+
+    renderCart(items);
 }
 
 window.removeItem = removeItem;
 window.increaseQuantity = increaseQuantity;
 window.decreaseQuantity = decreaseQuantity;
 
-const testButton = document.getElementById('test-button');
-testButton.addEventListener('click', testInsertCartItem);
-
-// testInsertCartItem();
-renderCart();
+loadCart();
